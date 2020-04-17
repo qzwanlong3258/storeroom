@@ -4,20 +4,20 @@
     <div class="login_form">
       <div class="login_form_hd">云端</div>
       <div style="padding: 20px">
-        <el-form  :model="formInline" class="demo-form-inline">
-          <el-form-item label="账号" class="form-input" >
-            <el-input style=" width: calc(100% - 60px);" size="mini" class="form-input-width"  v-model="formInline.user" placeholder="请输入账号"></el-input>
+        <el-form  :model="dataForm" :rules="dataRule" ref="dataForm" class="demo-form-inline" status-icon>
+          <el-form-item label="账号" class="form-input" prop="userName">
+            <el-input style=" width: calc(100% - 60px);" size="mini" class="form-input-width"  v-model="dataForm.userName" placeholder="请输入账号"></el-input>
           </el-form-item>
-          <el-form-item label="密码" class="form-input" >
-            <el-input style=" width: calc(100% - 60px);" size="mini" v-model="formInline.user" placeholder="请输入密码"></el-input>
+          <el-form-item label="密码" class="form-input" prop="password">
+            <el-input style=" width: calc(100% - 60px);" size="mini" v-model="dataForm.password" placeholder="请输入密码"></el-input>
           </el-form-item>
-          <el-form-item label="" class="form-input" >
-            <el-row :gutter="20">
+          <el-form-item  class="form-input" prop="xcode">
+            <el-row :gutter="10">
               <el-col :span="12">
-                <el-input style=" margin-left: 40px" size="mini" v-model="formInline.user" placeholder="验证码"></el-input>
+                <el-input style="padding-left: 50px" size="mini" v-model="dataForm.xcode" placeholder="验证码"></el-input>
               </el-col>
-              <el-col :span="10" class="login-captcha">
-                <img :src="captchaPath" @click="getCaptcha()" alt="">
+              <el-col :span="8" class="login-captcha">
+                <img :src="xcodePic" style="margin-left: 50px;vertical-align: middle" @click="getXcode()" alt="">
               </el-col>
             </el-row>
 
@@ -37,16 +37,31 @@
 
 <script>
 // @ is an alias to /src
-
+import { Login, getXcodePic} from "@/api/login";
+import { getUUID } from '@/utils/index'
 
 export default {
   data(){
     return{
-      formInline: {
-        user: '',
-        region: '',
+      dataForm: {
+        userName: '',
+        password: '',
+        xcode:'',
+        refId: ''
 
       },
+      dataRule: {
+        userName: [
+          { required: true, message: '帐号不能为空', trigger: 'blur' }
+        ],
+        password: [
+          { required: true, message: '密码不能为空', trigger: 'blur' }
+        ],
+        xcode: [
+          { required: true, message: '验证码不能为空', trigger: 'blur' }
+        ]
+      },
+      xcodePic:'',
       fullWidth:document.documentElement.clientWidth,
       fullHeight:document.documentElement.clientHeight
 
@@ -54,18 +69,35 @@ export default {
   },
   created(){
     window.addEventListener('resize', this.handleResize)
+    this.getXcode()
   },
   beforeDestroy: function () {
     window.removeEventListener('resize', this.handleResize)
   },
 
   methods:{
-    onSubmit() {
-      console.log('submit!');
+    async submit() {
+      this.$refs['dataForm'].validate(async (valid) => {
+        if (valid) {
+          let datalist=await Login(this.dataForm)
+          console.log(datalist)
+          console.log('submit!');
+        }
+      })
+
     },
     handleResize (event) {
       this.fullWidth = document.documentElement.clientWidth
       this.fullHeight = document.documentElement.clientHeight
+    },
+    // 验证码
+    async getXcode(){
+      this.dataForm.refId = getUUID()
+      console.log(this.dataForm.refId)
+      this.dataForm.xcode = ''
+      this.xcodePic = await getXcodePic(this.dataForm.refId)
+      console.log(this.xcodePic)
+
     }
 
   }
@@ -125,6 +157,14 @@ export default {
     width: 100%;
     margin-bottom: 10px;
 
+  }
+  .login-captcha {
+    /*overflow: hidden;*/
+
+  }
+  .login-captcha img {
+    width: 100%;
+    cursor: pointer;
   }
 
 </style>
