@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "申请",
-  "usingComponents": {
-    "pick-regions": "/components/pick-regions/pick-regions",
-    "w-picker": "/components/w-picker/w-picker",
-    "uni-popup": "/components/uni-popup/uni-popup",
-    "simple-address": "/components/simple-address-normal/simple-address"
-  }
-}

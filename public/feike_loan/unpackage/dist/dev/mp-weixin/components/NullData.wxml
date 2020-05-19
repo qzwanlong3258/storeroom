@@ -1,1 +1,0 @@
-<view class="nullData_view"><image class="nullData_image" src="{{imgs.NULL_DATA}}" mode="aspectFit"></image><text class="nullData_text">{{content}}</text></view>

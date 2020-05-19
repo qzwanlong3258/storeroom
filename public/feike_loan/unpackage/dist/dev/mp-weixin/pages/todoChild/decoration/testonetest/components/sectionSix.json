@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "simple-address": "/components/simple-address/simple-address",
-    "uni-popup": "/components/uni-popup/uni-popup"
-  }
-}

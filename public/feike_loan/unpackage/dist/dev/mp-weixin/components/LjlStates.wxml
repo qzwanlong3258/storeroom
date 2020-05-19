@@ -1,1 +1,0 @@
-<view class="states-box data-v-3b6db9c9"><block wx:for="{{infor.list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><text data-event-opts="{{[['tap',[['stateChange',[index]]]]]}}" class="{{['data-v-3b6db9c9',infor.index===index&&'active']}}" bindtap="__e">{{item.title}}</text></block></view>
