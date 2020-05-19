@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "申请进度",
+  "usingComponents": {
+    "uni-steps": "/components/uni-steps/uni-steps",
+    "ljl-states": "/components/LjlStates",
+    "null-data": "/components/NullData"
+  }
+}
