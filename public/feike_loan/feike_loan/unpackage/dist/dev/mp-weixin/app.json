@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/todoChild/decoration/index",
+    "pages/todoChild/decoration/testonetest/index",
+    "pages/todoChild/decoration/testonetest/testonetestsubmit/index",
+    "pages/todoChild/decoration/application/index",
+    "pages/todoChild/decoration/schedule/index",
+    "pages/todoChild/decoration/record/index",
+    "pages/todoChild/decoration/record/recordDetail/index",
+    "pages/auth/auth"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {}
+}

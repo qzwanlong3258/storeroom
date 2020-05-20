@@ -1,0 +1,118 @@
+
+.sectionTwo.data-v-87463724{
+	font-size: 32rpx;
+	font-family: MicrosoftYaHei;
+	background: rgba(242,246,249,1);
+	height: 100%;
+	position: relative;
+}
+.sectionTwo-box.data-v-87463724{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.nextclass.data-v-87463724{
+	position: absolute;
+	left: calc(50% - 20rpx);
+	bottom: 60rpx;
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+	color: #333333;
+}
+.textClass.data-v-87463724{
+	position: absolute;
+	left: calc(50% - 36rpx);
+	bottom: 20rpx;
+	font-size: 28rpx;
+	color: #333333;
+}
+.sectionTwo-hd.data-v-87463724{
+	height: 80rpx;
+	margin: 103rpx 55rpx 63rpx;
+	background: #FFFFFF;
+	color: #000000;
+	font-size: 34rpx;
+	line-height: 80rpx;
+	padding-left: 20rpx;
+}
+.sectionTwo-bd.data-v-87463724{
+	margin: 63rpx 100rpx;
+	height: 250rpx;
+	
+	display: -webkit-box;
+	
+	display: -webkit-flex;
+	
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.sectionTwo-bd view.data-v-87463724 {
+	-webkit-box-flex: 45%;
+	-webkit-flex: 45%;
+	        flex: 45%;
+	background: #FFFFFF;
+	height: 238rpx;
+	margin: 10rpx;
+}
+.sectionTwo-bd view image.data-v-87463724{
+	width: 66rpx;
+	height: 66rpx;
+	display: block;
+	margin: 40rpx auto;
+}
+.sectionTwo-bd view label.data-v-87463724 {
+	width: 100%;
+	text-align: center;
+	font-size: 30rpx;
+	color: 000000;
+}
+.sectionTwo-bd view label radio.data-v-87463724 {
+	margin-left: 60rpx;
+	margin-right: 30rpx;
+}
+.sectionTwo-ft.data-v-87463724{
+	margin: 63rpx 100rpx;
+	height: 400rpx;
+	
+	display: -webkit-box;
+	
+	display: -webkit-flex;
+	
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.sectionTwo-ft view.data-v-87463724 {
+	-webkit-box-flex: 45%;
+	-webkit-flex: 45%;
+	        flex: 45%;
+	background: #FFFFFF;
+	height: 200rpx;
+	margin: 10rpx;
+	line-height: 200rpx;
+}
+.sectionTwo-ft view label.data-v-87463724 {
+	width: 100%;
+	text-align: center;
+	font-size: 30rpx;
+	color: 000000;
+}
+.sectionTwo-ft view label radio.data-v-87463724 {
+	margin-left: 40rpx;
+	margin-right: 10rpx;
+}
+/* .input_color {
+	color: #dbdbdb;
+} */
+/* .sectionTwo-ft-input input{
+	margin-left: 40rpx;
+	border: 2rpx solid #313131;
+	font-size: 22rpx;
+	text-align: center;
+}
+.sectionTwo-ft-input input:nth-child(3){
+	margin-right: 40rpx;
+	
+} */
+

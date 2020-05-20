@@ -1,0 +1,72 @@
+.page_view-inner-padding {
+	box-sizing: border-box;
+	padding-left: $distance_page-inner-padding;
+	padding-right: $distance_page-inner-padding;
+}
+.page_view-all-inner-padding {
+	box-sizing: border-box;
+	padding: $distance_page-inner-padding;
+}
+.page_view-bottomMenu {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0rpx;
+	padding-bottom: 30rpx;
+	background: white;
+	border-top-left-radius: 100rpx;
+	border-top-right-radius: 100rpx;
+}
+.page_icon-right.active {
+	transform: rotateZ(90deg);
+}
+.page_text-single-omit {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.page_view-full {
+	width: 100%;
+	height: 100%;
+}
+.page_view-box {
+	border-radius: $radius_page-box;
+	background-color: $color_background-secondary;
+}
+.page_view-box + .page_view-box {
+	margin-top: $distance_box-inner-margin;
+}
+.page_view-box-inner-padding {
+	padding-top: 24rpx;
+	padding-bottom: 24rpx;
+}
+.page_view-border-top + .page_view-border-top {
+	border-top: 1rpx solid $color_border;
+}
+.nullData_view {
+	width: 350rpx;
+	position: absolute;
+	top: 20%;
+	left: calc(50% - 175rpx);
+	filter: opacity(.7);
+}
+@mixin customer-infor_text {
+	color: white;
+	font-size: 24rpx;
+	padding: 5rpx 30rpx;
+	margin-left: 10rpx;
+	border-radius: 6rpx;
+}
+.customerInfor_text-role.member {
+	@include customer-infor_text;
+	background-color: $color_member;
+}
+.customerInfor_text-role.designer {
+	@include customer-infor_text;
+	background-color: $color_designer;
+}
+.customerInfor_text-role.customer {
+	@include customer-infor_text;
+	background-color: $color_customer;
+}

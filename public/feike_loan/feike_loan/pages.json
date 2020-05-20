@@ -1,0 +1,62 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "装修分期"
+		}
+	},
+		{
+			"path": "pages/todoChild/decoration/index",
+			"style": {
+				"navigationBarTitleText": "装修分期"
+			}
+		},
+		{
+		    "path" : "pages/todoChild/decoration/testonetest/index",
+		    "style" : {
+				"navigationBarTitleText": "测一测"
+			}
+		},
+		{
+		    "path" : "pages/todoChild/decoration/testonetest/testonetestsubmit/index",
+		    "style" : {
+				"navigationBarTitleText": "测一测"
+			}
+		},
+		{
+		    "path" : "pages/todoChild/decoration/application/index",
+		    "style" : {
+				"navigationBarTitleText": "申请"
+			}
+		},
+		{
+		    "path" : "pages/todoChild/decoration/schedule/index",
+		    "style" : {
+				"navigationBarTitleText": "申请进度"
+			}
+		},
+		{
+		    "path" : "pages/todoChild/decoration/record/index",
+		    "style" : {
+				"navigationBarTitleText": "申请记录"
+			}
+		},
+		{
+		    "path" : "pages/todoChild/decoration/record/recordDetail/index",
+		    "style" : {
+				"navigationBarTitleText": "申请记录详情"
+			}
+		},
+		{
+			"path": "pages/auth/auth",
+			"style": {
+				"navigationBarTitleText": "授权"
+			}
+		}
+	],
+	"globalStyle": {
+		
+		"navigationStyle": "custom"
+	}
+}
